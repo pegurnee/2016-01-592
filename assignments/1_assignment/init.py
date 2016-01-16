@@ -11,7 +11,8 @@ relations = [
   'college',
   'department',
   'subject',
-  'term'
+  'term',
+  'enrollment'
   ]
 bigun = 'enrollment'
 
@@ -25,11 +26,10 @@ for relation in relations:
       if not exists
     %s
     (
-      %s,
-      primary key (%s) on conflict ignore
+      %s
     );
-    ''' % (relation, ','.join(headers), headers[0])
-    #for row in read:
-    c.execute(sql)
+    ''' % (relation, ','.join(headers))
+
+    #c.execute('create table if not exists %s ( %s, primary key (%s) on conflict ignore);' % (relation, ','.join(headers), headers[0]))
 
     c.executemany('insert into %s values (%s)' % (relation, ','.join('?' * len(headers))), read)
