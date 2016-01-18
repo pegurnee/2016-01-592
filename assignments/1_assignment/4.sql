@@ -6,7 +6,7 @@ from
 , department
 where
   COLL_CODE = 'AS'
-  and TERM_CODE_KEY = '201620'
+  and TERM_CODE_KEY = '201510'
   and STVDEPT_CODE = DEPT_CODE
 group by STVDEPT_DESC
 order by `hour production` desc;
