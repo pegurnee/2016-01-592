@@ -3,6 +3,6 @@ select
   TITLE as `name`
 from enrollment
 where
-  TERM_CODE_KEY like '2015%'
+  TERM_CODE_KEY = '201510'
 order by `num enrolled` desc
 limit 10;
