@@ -1,7 +1,10 @@
 select
-  count(*) as `online courses`,
-  STVTERM_ACYR_CODE as `year offered`
-from term, classes, enrollment
+  count(*) as `online courses`
+, STVTERM_ACYR_CODE as `year offered`
+from
+  term
+, classes
+, enrollment
 where
   STVSCHD_CODE='DEO'
   and STVSCHD_CODE=SCHD_CODE_MEET1
