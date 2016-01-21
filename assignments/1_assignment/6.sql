@@ -11,6 +11,7 @@ from
     select
       TERM_CODE_KEY               as `the_term`
     , sum(ACTUAL_ENROLLMENT)      as `enrolled`
+    , count(CRN_KEY)              as `num_sect`
     , CRSE_NUMBER                 as `course`
     , substr(TERM_CODE_KEY, 0, 5) as `year`
     , case
@@ -33,6 +34,8 @@ from
         )
     group by
       TERM_CODE_KEY, CRSE_NUMBER
+    order by
+      `year`, `semester`
   ) as raw
 group by
   `the_term`;
