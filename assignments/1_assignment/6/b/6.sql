@@ -11,4 +11,6 @@ from
   enrollment
 where
   BLDG_CODE1='PRAY-H'
-  and ROOM_CODE1='520';
+  and ROOM_CODE1='520'
+group by
+  TERM_CODE_KEY;
