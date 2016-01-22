@@ -8,12 +8,7 @@ select
     end                             as `semester`
 , substr(TERM_CODE_KEY, 0, 5)       as `year`
 , DEPT_CODE || ' ' || CRSE_NUMBER   as `course`
-, case
-    when DEPT_CODE == 'COSC' then
-      0
-    else
-      count(DEPT_CODE)
-    end                             as `non cosc`
+, count(DEPT_CODE)                  as `num courses`
 from
   enrollment
 where
