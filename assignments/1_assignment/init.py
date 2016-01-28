@@ -7,9 +7,9 @@ c = conn.cursor()
 relations = [
   'building',
   'campus',
-  'classes',
   'college',
   'department',
+  'location',
   'subject',
   'term',
   'enrollment'
