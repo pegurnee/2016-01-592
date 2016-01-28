@@ -3,7 +3,7 @@ select
 , STVTERM_ACYR_CODE as `year offered`
 from
   term
-, classes
+, location
 , enrollment
 where
   STVSCHD_CODE='DEO'
