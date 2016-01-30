@@ -1,0 +1,89 @@
+--
+-- File generated with SQLiteStudio v3.0.7 on Fri Jan 29 23:12:30 2016
+--
+-- Text encoding used: UTF-8
+--
+PRAGMA foreign_keys = off;
+BEGIN TRANSACTION;
+
+-- Table: location
+CREATE TABLE location (
+    STVSCHD_CODE  PRIMARY KEY,
+    STVSCHD_DESC
+);
+
+
+-- Table: campus
+CREATE TABLE campus (
+    STVCAMP_CODE  PRIMARY KEY,
+    STVCAMP_DESC
+);
+
+
+-- Table: subject
+CREATE TABLE subject (
+    STVSUBJ_CODE  PRIMARY KEY,
+    STVSUBJ_DESC
+);
+
+
+-- Table: term
+CREATE TABLE term (
+    STVTERM_CODE       PRIMARY KEY,
+    STVTERM_DESC,
+    STVTERM_ACYR_CODE
+);
+
+
+-- Table: building
+CREATE TABLE building (
+    STVBLDG_CODE  PRIMARY KEY ON CONFLICT ROLLBACK,
+    STVBLDG_DESC
+);
+
+
+-- Table: enrollment
+CREATE TABLE enrollment (
+    TERM_CODE_KEY      REFERENCES term (STVTERM_CODE) ON UPDATE CASCADE,
+    COLL_CODE          REFERENCES college (STVCOLL_CODE) ON UPDATE CASCADE,
+    DEPT_CODE          REFERENCES department (STVDEPT_CODE) ON UPDATE CASCADE,
+    SUBJ_CODE          REFERENCES subject (STVSUBJ_CODE) ON UPDATE CASCADE,
+    CRSE_NUMBER,
+    SEQ_NUMBER_KEY,
+    CRN_KEY,
+    TITLE,
+    CREDIT_HOURS,
+    ACTUAL_ENROLLMENT,
+    LEVL_CODE1,
+    SCHD_CODE_MEET1    REFERENCES location (STVSCHD_CODE) ON UPDATE CASCADE,
+    CAMP_CODE          REFERENCES campus (STVCAMP_CODE) ON UPDATE CASCADE,
+    BLDG_CODE1         REFERENCES building (STVBLDG_CODE) ON UPDATE CASCADE,
+    ROOM_CODE1,
+    PTRM_START_DATE,
+    PTRM_END_DATE,
+    DAYS,
+    BEGIN_TIME1,
+    END_TIME1,
+    PRIMARY KEY (
+        TERM_CODE_KEY,
+        CRN_KEY
+    )
+);
+
+
+-- Table: college
+CREATE TABLE college (
+    STVCOLL_CODE  PRIMARY KEY,
+    STVCOLL_DESC
+);
+
+
+-- Table: department
+CREATE TABLE department (
+    STVDEPT_CODE  PRIMARY KEY,
+    STVDEPT_DESC
+);
+
+
+COMMIT TRANSACTION;
+PRAGMA foreign_keys = on;
