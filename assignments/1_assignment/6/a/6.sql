@@ -1,3 +1,4 @@
+--shows the number of students enrolled in 111,211,311,112,212 per semester
 select
   `the_term`
 , max(case when `course` == '111' then `enrolled` else null end) as `111`

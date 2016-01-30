@@ -1,4 +1,4 @@
---shows number of non-cs classes that used Pray-Harrold 520
+--shows how many 400-level computer science courses were offered per term
 select
   substr(TERM_CODE_KEY, 0, 5)       as `year`
 , case
@@ -7,14 +7,11 @@ select
     else
       'winter'
     end                             as `semester`
-, count(DEPT_CODE)                  as `num courses`
+, count(CRSE_NUMBER)                as `Num of 400-level CS courses offered`
 from
   enrollment
 where
-  BLDG_CODE1='PRAY-H'
-  and ROOM_CODE1='520'
-  and DEPT_CODE <> 'COSC'
+  CRSE_NUMBER like '4%'
+  and DEPT_CODE='COSC'
 group by
-  DEPT_CODE, TERM_CODE_KEY
-order by
   TERM_CODE_KEY;
