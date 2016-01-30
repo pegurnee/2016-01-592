@@ -1,6 +1,6 @@
 select
   sum(cast(ACTUAL_ENROLLMENT as Integer)) as `num enrolled`
-, STVTERM_ACYR_CODE as `year offered`
+, STVTERM_ACYR_CODE                       as `year offered`
 from
   term
 , enrollment

@@ -1,5 +1,5 @@
 select
-  count(*) as `online courses`
+  count(*)          as `online courses`
 , STVTERM_ACYR_CODE as `year offered`
 from
   term
