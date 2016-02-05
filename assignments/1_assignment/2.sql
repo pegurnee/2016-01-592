@@ -1,3 +1,4 @@
+--displays course with the 10 highest enrollment rates
 select
   cast(ACTUAL_ENROLLMENT as Integer) as `num enrolled`
 , TITLE as `name`

@@ -1,3 +1,4 @@
+--list total number of students enrolled in COSC 111 grouped by term
 select
   sum(cast(ACTUAL_ENROLLMENT as Integer)) as `num enrolled`
 , STVTERM_ACYR_CODE                       as `year offered`

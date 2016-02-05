@@ -1,3 +1,4 @@
+--displays the amount of students enrolled in a classes given a specific time span
 select
   `Day`
 , (min(`raw`.`Time`) || '-' || max(`raw`.`Time`)) as `Time Span`

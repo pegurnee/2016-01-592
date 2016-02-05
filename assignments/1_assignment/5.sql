@@ -1,3 +1,4 @@
+--finds the net income of courses offered by the business college for fall 2015
 select
   sum(ACTUAL_ENROLLMENT
       * CREDIT_HOURS

@@ -1,3 +1,4 @@
+--counts number of online courses offered per year
 select
   count(*)          as `online courses`
 , STVTERM_ACYR_CODE as `year offered`
