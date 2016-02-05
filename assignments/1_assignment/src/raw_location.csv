@@ -1,0 +1,43 @@
+STVSCHD_CODE,STVSCHD_DESC
+DEC,"Distance Education, Comp Video"
+L,Lecture
+ST,Studio
+DEI,"Distance Education, Ind Learng"
+IST,Independent Study/Research
+AMU,Applied Music
+LAB,Laboratory
+LLA,"Comb - Lecture, Laboratory"
+LLR,"Comb - Lecture, Lab, Recitatn"
+MIG,MI Intercoll Grad Studies Prog
+PLA,Prior Learning Assessment
+REC,Recitation
+LRE,"Comb - Lecture, Recitation"
+DEO,"Distance Ed, Fully Online Lec"
+CP,Cooperative Education
+WLE,Lect w/WebCT Online Component
+WLB,Lab w/WebCT Online Component
+WLL,Comb Lec/Lab-WebCT Online Comp
+FE,Field Experience/Practicum
+WL,Web Laboratory WebCT
+LBR,"Comb - Lab, Recitation"
+DLB,"Distance Ed, Fully Online Lab"
+DLL,"Dist Ed, Fully Online Lec/Lab"
+ELE,Web-Enhanced Lecture
+ELB,Web-Enhanced Lab
+ELL,Web Enhanced Lecture/Lab
+HLE,Hybrid Lecture & Online
+HLB,Hybrid Lab & Online
+HLL,Hybrid Lecture/Lab & Online
+EBR,Web-Enhanced Lab/Recitation
+T,Transfer Course
+ELR,Web-Enhanced Lect/Recitation
+DRE,"Distance Ed, Fully Online Rec"
+LST,"Comb- Lecture, Studio"
+MT,Music Techniques
+SDO,DistEd Online Lec-CAS Sciences
+SEL,Web-Enhanced Lect-CAS Sciences
+SHL,Hybrid Lecture - CAS Sciences
+SL,CAS Lect w Required Lab or Rec
+ENS,Music Ensemble
+AMS,Applied Music Secondary
+DST,Design Studio

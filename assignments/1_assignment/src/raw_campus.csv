@@ -1,0 +1,60 @@
+STVCAMP_CODE,STVCAMP_DESC
+M, .
+DT1,EMU Detroit   Crse#000-499
+FT1,EMU Flint Crse#000-499
+DT5,EMU Detroit   Crse#500-699
+DT7,EMU Detroit   Crse#700-999
+FT5,EMU Flint Crse#500-699
+FT7,EMU Flint Crse#700-999
+JX1,EMU Jackson Crse#000-499
+JX5,EMU Jackson Crse#500-699
+JX7,EMU Jackson Crse#700-999
+M1,Main Campus Crse#000-499
+M5,Main Campus Crse#500-699
+M7,Main Campus Crse#700-999
+LV1,EMU Livonia  Crse#000-499
+LV5,EMU Livonia Crse#500-699
+LV7,EMU Livonia Crse#700-999
+MN1,EMU Monroe Crse#000-499
+MN5,EMU Monroe Crse#500-699
+MN7,EMU Monroe Crse#700-999
+TC1,Traverse Cty Crse#000-499
+TC5,Traverse Cty Crse#500-699
+TC7,Traverse Cty Crse#700-999
+IN1,Intl Campus Crse#000-499
+IN5,Intl Campus Crse#500-699
+IN7,Intl Campus Crse#700-999
+BR1,EMU Brighton Crse#000-499
+WW1,EMU Online Crse#000-499
+WW5,EMU Online Crse#500-699
+WW7,EMU Online Crse#700-999
+IL1,Independent Lrng Crse#000-499
+IL5,Independent Lrng Crse#500-699
+IL7,Independent Lrng Crse#700-999
+OC1,Othr Extended Programs 000-499
+OC5,Othr Extended Programs 500-699
+OC7,Othr Extended Programs 700-999
+WB1,Winter Break Crse#000-499
+WB5,Winter Break Crse#500-699
+WB7,Winter Break Crse#700-999
+MC1,MASCO-Not in Use. Ended 2006
+MC5,MASCO-Not in Use. Ended 2006
+MC7,MASCO-Not in Use. Ended 2006
+AP1,Acad Prog Abroad Crse#000-499
+AP5,Acad Prog Abroad Crse#500-699
+AP7,Acad Prog Abroad Crse#700-999
+INT,.
+OFF, .
+WC1,Wshtnaw Cty (WKU) Crse#000-499
+WC5,Wshtnaw Cty (WKU) Crse#500-699
+WC7,Wshtnaw Cty (WKU) Crse#700-999
+BR5,EMU Brighton Crse#500-699
+BR7,EMU Brighton Crse#700-999
+WW0,EMU Online
+FL1,EMU Fish Lake Crse#000-499
+FL5,EMU Fish Lake Crse#500-699
+FL7,EMU Fish Lake Crse#700-999
+OC0,Othr Extended Program Flat Fee
+XP1,APA Exchange Prog Crse#000-499
+XP5,APA Exchange Prog Crse#500-699
+XP7,APA Exchange Prog Crse#700-999
