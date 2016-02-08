@@ -5,7 +5,7 @@ import os
 
 with ftplib.FTP('ftp.ncdc.noaa.gov', 'anonymous', 'egurnee@emich.edu') as ftp:
 
-  limit = 1901
+  limit = 1926
   years = range(1901, limit + 1)
   store_loc = 'src/'
 
@@ -22,7 +22,7 @@ with ftplib.FTP('ftp.ncdc.noaa.gov', 'anonymous', 'egurnee@emich.edu') as ftp:
 
     for fname in files:
       local_fname = '{0}/{1}/{2}'.format(store_loc, year, fname)
-      if os.path.isfile(local_fname):
+      if os.path.isfile(local_fname) or os.path.isfile(local_fname[:-3]):
         print('  already had {}'.format(fname))
         continue
       with open(local_fname, 'wb') as ofile:
