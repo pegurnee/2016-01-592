@@ -1,26 +1,28 @@
 #!/usr/bin/env python3
 import ftplib
-
-def _write(block, file_to_write):
-  file_to_write.write(block)
-
-
-years = range(1901, 1926)
+import os
 
 ftp = ftplib.FTP('ftp.ncdc.noaa.gov', 'anonymous', 'egurnee@emich.edu')
-ftp.cwd('/pub/data/noaa/1901/')
 
-files = ftp.nlst()
-for fname in files:
-  with open(fname, 'wb') as ofile:
-    ftp.retrbinary('RETR ' + fname, ofile.write)
+limit = 1926
+years = range(1901, limit + 1)
+store_loc = 'src/'
 
-# dest = '1901'
-# ofile = open(dest, 'wb')
-# ftp.retrbinary('RETR ' + dest, _write)
+if not os.path.exists(store_loc):
+    os.makedirs(store_loc)
+
+for year in years:
+  ftp.cwd('/pub/data/noaa/{0}/'.format(year))
+  files = ftp.nlst()
+
+  if not os.path.exists('{0}/{1}/'.format(store_loc, year)):
+      os.makedirs('{0}/{1}/'.format(store_loc, year))
+
+  for fname in files:
+    with open('{0}/{1}/{2}'.format(store_loc, year, fname), 'wb') as ofile:
+      ftp.retrbinary('RETR ' + fname, ofile.write)
 
 print("File List: ")
-
 
 for f in files:
   print(f)
