@@ -29,11 +29,13 @@ with ftplib.FTP('ftp.ncdc.noaa.gov', 'anonymous', 'egurnee@emich.edu') as ftp:
         ftp.retrbinary('RETR ' + fname, ofile.write)
 
       try:
-        with open('{0}/{1}/{1}.txt'.format(store_loc, year), 'ab') as uzip:
+        with open('{0}/{1}.txt'.format(store_loc, year), 'ab') as uzip:
           with gzip.open(local_fname, 'rb') as zdld:
             uzip.write(zdld.read())
             os.remove(local_fname)
       except EOFError as e:
         print('couldn\'t unzip {} because of {}'.format(local_fname, e))
+
+    os.rmdir('{0}/{1}'.format(store_loc, year))
 
 print('all source files downloaded and unzipped')
