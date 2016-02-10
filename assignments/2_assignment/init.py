@@ -7,7 +7,7 @@ with ftplib.FTP('ftp.ncdc.noaa.gov', 'anonymous', 'egurnee@emich.edu') as ftp:
 
   limit = 1926
   years = range(1901, limit + 1)
-  store_loc = 'src/'
+  store_loc = 'in/'
 
   if not os.path.exists(store_loc):
       os.makedirs(store_loc)
@@ -29,7 +29,7 @@ with ftplib.FTP('ftp.ncdc.noaa.gov', 'anonymous', 'egurnee@emich.edu') as ftp:
         ftp.retrbinary('RETR ' + fname, ofile.write)
 
       try:
-        with open(local_fname[:-3], 'wb') as uzip:
+        with open('{0}/{1}/{1}.txt'.format(store_loc, year), 'ab') as uzip:
           with gzip.open(local_fname, 'rb') as zdld:
             uzip.write(zdld.read())
             os.remove(local_fname)
