@@ -1,3 +1,5 @@
+package src;
+
 // cc MaxTemperature Application to find the maximum temperature in the weather dataset
 // vv MaxTemperature
 import org.apache.hadoop.fs.Path;

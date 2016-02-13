@@ -1,3 +1,5 @@
+package src;
+
 // cc MaxTemperatureWithCombiner Application to find the maximum temperature, using a combiner function for efficiency
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IntWritable;
