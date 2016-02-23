@@ -5,7 +5,7 @@ import os
 
 with ftplib.FTP('ftp.ncdc.noaa.gov', 'anonymous', 'egurnee@emich.edu') as ftp:
 
-  limit = 1926
+  limit = 2015
   years = range(1901, limit + 1)
   store_loc = 'in/'
 
@@ -13,6 +13,8 @@ with ftplib.FTP('ftp.ncdc.noaa.gov', 'anonymous', 'egurnee@emich.edu') as ftp:
       os.makedirs(store_loc)
 
   for year in years:
+    if os.path.exists('{0}/{1}.txt'.format(store_loc, year)):
+      continue
     print('getting year {}'.format(year))
     ftp.cwd('/pub/data/noaa/{0}/'.format(year))
     files = ftp.nlst()
