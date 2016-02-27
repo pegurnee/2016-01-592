@@ -2,7 +2,7 @@
 
 if [ ! -d "in" ]
   then
-    mkdir texts
+    mkdir in
 fi
 
 
