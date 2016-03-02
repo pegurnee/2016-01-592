@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-O_LOCATION=assign3/out1
+
+O_LOCATION="assign3/out$1"
 REPORT="report.txt"
 DIVIDER="________________\n"
 
