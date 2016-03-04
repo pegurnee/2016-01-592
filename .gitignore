@@ -1,4 +1,5 @@
 *.db
 *.class
 in/
+report.txt
 __pycache__
