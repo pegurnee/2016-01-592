@@ -2,7 +2,7 @@
 
 
 O_LOCATION="assign3/out$1"
-REPORT="report.txt"
+REPORT="report_$1.txt"
 DIVIDER="________________\n"
 
 hdfs dfs -get $O_LOCATION/p*
