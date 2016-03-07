@@ -9,6 +9,8 @@ STREAM_JAR=/usr/lib/hadoop-0.20-mapreduce/contrib/streaming/hadoop-streaming-mr1
 hdfs dfs -rm -r $O_LOCATION
 
 hadoop jar $STREAM_JAR \
+-D mapreduce.job.output.key.comparator.class=org.apache.hadoop.mapred.lib.KeyFieldBasedComparator \
+-D mapreduce.partition.keycomparator.options=-n \
 -file $S_LOCATION/c-mapper.py   -mapper $S_LOCATION/c-mapper.py \
 -file $S_LOCATION/c-reducer.py  -reducer $S_LOCATION/c-reducer.py \
 -input $I_LOCATION/*            -output $O_LOCATION
