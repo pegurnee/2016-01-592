@@ -14,3 +14,5 @@ hadoop jar $STREAM_JAR \
 -input $I_LOCATION/*            -output $O_LOCATION
 
 bash src/gen_report.sh 1
+
+bash src/sort_by_value.sh 1
