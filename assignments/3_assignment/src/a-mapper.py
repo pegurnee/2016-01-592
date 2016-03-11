@@ -15,4 +15,6 @@ for line in sys.stdin:
     # Reduce step, i.e. the input for reducer.py
     #
     # tab-delimited; the trivial word count is 1
-    print '%s\t%s' % (word, 1)
+    word = ''.join(ch for ch in word if ch not in '[]\\\'"`~!@#$%^&*()-_=+\{\}/?;:<>,.|')
+    if word:
+      print '%s\t%s' % (word, 1)
