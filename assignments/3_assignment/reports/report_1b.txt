@@ -1,0 +1,26 @@
+________________
+
+Head 10:
+foremother	1
+forelegs	1
+foreland	1
+foreknowledge	1
+foreigns	1
+foreigner	1
+flowerclose	1
+forehoofs	1
+foreheads	1
+foregone	1
+________________
+
+Tail 10:
+with	4736
+it	6033
+that	6549
+is	7720
+in	12184
+to	12218
+a	12573
+and	17236
+of	24072
+the	42383
